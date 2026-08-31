@@ -1,0 +1,31 @@
+[package]
+name = "cordis-runtime"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+arc-swap.workspace = true
+async-trait.workspace = true
+cordis-core = { version = "0.1.0", path = "../cordis-core" }
+futures.workspace = true
+parking_lot.workspace = true
+slotmap.workspace = true
+smallvec.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+criterion.workspace = true
+hdrhistogram.workspace = true
+stats_alloc.workspace = true
+tokio.workspace = true
+
+[[bench]]
+name = "runtime"
+harness = false
+
+[lints]
+workspace = true
